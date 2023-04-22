@@ -789,6 +789,9 @@ export default class Block extends EventsDispatcher<BlockEvents> {
         contentNode = $.make('div', Block.CSS.content),
         pluginsContent = this.toolInstance.render();
 
+        wrapper.classList.add(Block.CSS.wrapper + "-"+this.id);
+        wrapper.dataset.blockId = this.id;
+
     contentNode.appendChild(pluginsContent);
 
     /**
